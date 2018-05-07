@@ -1,4 +1,4 @@
-# using Jacobi and Gauss-Seidel Iterative Method to solve linear equation Ax=b.
+# using Jacobi and Gauss-Seidel and SOR Iterative Method to solve linear equation Ax=b.
 import numpy as np
 from numpy.linalg import inv
 
@@ -88,7 +88,7 @@ def solve_linear_equation_SOR(A, b, w, iter_time=100):
         n = A.shape[0]
         x = np.array([0] * n, dtype='float64')  # initial solution of Ax=b
 
-        # Gauss-Seidel iteration
+        # SOR iteration
         # x_k+1 = (wL+D)_inv*((1-w)Dx_k-wUx_k+wb)
         for k in range(iter_time):  # iteration times
             x = np.dot(inv(w*L+D), np.dot((1-w)*D, x)+np.dot(-w*U, x) + w*b)
