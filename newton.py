@@ -49,7 +49,7 @@ def main():
     f = lambda x: math.sin(x) - math.cos(x)
     df = lambda x: math.cos(x) + math.sin(x)
     x = 0
-    sol = single_value_Newton(f, df, x, 100)
+    sol = single_variable_Newton(f, df, x, 100)
     print(sol)
 
 
@@ -70,7 +70,7 @@ def main():
     # Initial solution vector
     X = np.array([1,2], dtype='float64')
 
-    SOL = multi_values_Newton(f, g, df_u, df_v, dg_u, dg_v, X, 10)
+    SOL = multi_variables_Newton(f, g, df_u, df_v, dg_u, dg_v, X, 10)
     print(SOL)
 
     '''
@@ -94,7 +94,7 @@ def main():
     # X = np.array([0.1, 0.1], dtype='float64')
     X = np.array([0.8, 0.4], dtype='float64')
 
-    SOL = multi_values_Newton(f, g, df_u, df_v, dg_u, dg_v, X, 50)
+    SOL = multi_variables_Newton(f, g, df_u, df_v, dg_u, dg_v, X, 50)
     print(SOL)
 
 main()
