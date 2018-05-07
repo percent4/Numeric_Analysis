@@ -12,7 +12,7 @@ from numpy.linalg import inv
     x: initial value
     return: x, final solution
 '''
-def single_value_Newton(f, df, x, iter_time=10):
+def single_variable_Newton(f, df, x, iter_time=10):
     # Newton iteration: x_k+1 = x_k - f(x_k)/df(x_k)
     for _ in range(iter_time):    # iteration times
         x = x-f(x)/df(x)
@@ -21,7 +21,7 @@ def single_value_Newton(f, df, x, iter_time=10):
 
 # try to concise the parameters of the function
 # this def is valid for 2*2 equations, 2 funcitons, with each two variables
-def multi_values_Newton(f,g,df_u,df_v,dg_u,dg_v, X, iter_time):
+def multi_variables_Newton(f,g,df_u,df_v,dg_u,dg_v, X, iter_time):
     # Newton iteration: DF(X_k)s=-F(X_k)
     #                   X_k+1 = X_k+s
 
