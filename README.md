@@ -9,3 +9,4 @@ This project is mainly to introduce some classical methods in Numeric Analysis u
 - SDD_Jacobi_Iterative.py: sovling linear equations using Jacobi Iterative Method for SDD(Strictly Diagonally Dominant) matrix.
 - SDD_iterative.py: sovling linear equations using Jacobi, Gauss-Seidei Iterative Method for SDD matrix.
 - SDD_iterative_SOR.py: sovling linear equations using Jacobi, Gauss-Seidei, SOR Iterative Method for SDD matrix.
+- TDMA.py: use Thomas Method to solve tridiagonal linear equation
